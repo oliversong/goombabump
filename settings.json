@@ -1,0 +1,15 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // Name your instance!
+  "title": "Notability",
+
+  //the default text of a pad
+  "defaultPadText" : "Welcome to your collaborative notepad!",
+  
+  "stickychat": true,
+
+}

@@ -8,8 +8,7 @@ iframe {position:absolute;}
 {
   position: absolute;
   z-index:500;
-  background-color: #000;
-  background-color: rgba(0,0,0,0.7);
+  background-color:#f6f5f2;
   width: 160px;
   right: 20px;
   top: 40px;
@@ -37,8 +36,6 @@ a img
 
 #editbar 
 {
-  background: #f7f7f7;
-  background: linear-gradient(#f7f7f7, #f1f1f1 80%);
   border-bottom: 1px solid #ccc;
   height: 32px;
   overflow: hidden;
@@ -48,8 +45,6 @@ a img
 
 #editbar ul li 
 {
-  background: #fff;
-  background: linear-gradient(#fff, #f0f0f0);
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
@@ -75,13 +70,14 @@ a img
 }
 
 #editbar ul li:hover {
-  background: #fff;
-  background: linear-gradient(#f4f4f4, #e4e4e4);
+  background: -webkit-linear-gradient(top,#f7f5f2,#ECEAE7);
+  background: linear-gradient(top,#f7f5f2,#ECEAE7);
 }
 
 #editbar ul li:active {
   background: #eee;
-  background: linear-gradient(#ddd, #fff);
+  background: -webkit-linear-gradient(top,#ECEAE7,#f7f5f2);
+  background: linear-gradient(top,#ECEAE7,#f7f5f2);
   box-shadow: 0 0 8px rgba(0,0,0,.1) inset;
 }
 
@@ -95,6 +91,9 @@ a img
 #editbar ul li a
 {
   display: block;
+  background: -webkit-linear-gradient(top,#f7f5f2,#ECEAE7);
+  background: linear-gradient(top,#f7f5f2,#ECEAE7);
+  border: 1px solid #eee;
 }
 #editbar ul li a img
 {
@@ -127,6 +126,9 @@ a img
   bottom: 0px;
 
   z-index: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 #editorcontainer iframe {
@@ -375,8 +377,8 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
 }
 
 #mycolorpickersave, #mycolorpickercancel {
-  background: #fff;
-  background: linear-gradient(#fff, #ccc);
+  background: -webkit-linear-gradient(top,#f7f5f2,#ECEAE7);
+  background: linear-gradient(top,#f7f5f2,#ECEAE7);
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size:12px; 
@@ -771,11 +773,10 @@ ul#colorpickerswatches li:hover
 
 #chattext
 {
-  background-color: white;
-  border: 1px solid white;
   overflow-y:scroll;
-  font-size: 12px;
+  font-size: 14px;
   position:absolute;
+  height:20px;
   right:0px;
   left:0px;
   top:25px;
@@ -1152,7 +1153,6 @@ input[type=checkbox] {
 }
 
 .stickyChat {
- background-color: #f1f1f1 !important;
  right: 0px !important;
  top: 36px;
  border-radius: 0px !important;
