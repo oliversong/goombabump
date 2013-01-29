@@ -18,11 +18,11 @@
  * limitations under the License.
  */
 
-var CommonCode = require('../utils/common_code');
+
 var ERR = require("async-stacktrace");
 var db = require("./DB").db;
 var async = require("async");
-var randomString = CommonCode.require('/pad_utils').randomString;
+var randomString = require('ep_etherpad-lite/static/js/pad_utils').randomString;
 
 /**
  * returns a read only id for a pad
@@ -71,4 +71,34 @@ exports.getReadOnlyId = function (padId, callback)
 exports.getPadId = function(readOnlyId, callback)
 {
   db.get("readonly2pad:" + readOnlyId, callback);
+}
+
+/**
+ * returns a the padId and readonlyPadId in an object for any id
+ * @param {String} padIdOrReadonlyPadId read only id or real pad id
+ */
+exports.getIds = function(padIdOrReadonlyPadId, callback) {
+  var handleRealPadId = function () {
+    exports.getReadOnlyId(padIdOrReadonlyPadId, function (err, value) {
+      callback(null, {
+        readOnlyPadId: value,
+        padId: padIdOrReadonlyPadId,
+        readonly: false
+      });
+    });
+  }
+
+  if (padIdOrReadonlyPadId.indexOf("r.") != 0)
+    return handleRealPadId();
+
+  exports.getPadId(padIdOrReadonlyPadId, function (err, value) {
+    if(ERR(err, callback)) return;
+    if (value == null)
+      return handleRealPadId();
+    callback(null, {
+      readOnlyPadId: padIdOrReadonlyPadId,
+      padId: value,
+      readonly: true
+    });
+  });
 }
