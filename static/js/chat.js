@@ -25,7 +25,7 @@ var padcookie = require('/pad_cookie').padcookie;
 
 var chat = (function()
 {
-  var isStuck = true;
+  var isStuck = false;
   var chatMentions = 0;
   var title = document.title;
   var self = {
@@ -159,4 +159,5 @@ var chat = (function()
 }());
 
 exports.chat = chat;
+exports.chat.stickToScreen(true);
 
