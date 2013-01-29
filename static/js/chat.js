@@ -25,7 +25,7 @@ var padcookie = require('/pad_cookie').padcookie;
 
 var chat = (function()
 {
-  var isStuck = false;
+  var isStuck = true;
   var chatMentions = 0;
   var title = document.title;
   var self = {
