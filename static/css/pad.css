@@ -761,9 +761,9 @@ ul#colorpickerswatches li:hover
   height: 200px;
   z-index: 400;
   background-color:#f7f7f7;
-  border-left: 1px solid #999;
-  border-right: 1px solid #999;
-  border-top: 1px solid #999;
+  border-left: none !important;
+  border-right: 1px solid #CCC !important;
+  border-bottom: 1px solid #CCC !important;
   padding: 3px;
   padding-bottom: 10px;
   border-top-left-radius: 5px;
@@ -1157,8 +1157,6 @@ input[type=checkbox] {
  top: 36px;
  border-radius: 0px !important;
  height: auto !important;
- border: none !important;
- border-left: 1px solid #ccc !important;
  width: 185px !important;
 }
 
