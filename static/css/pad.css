@@ -91,9 +91,6 @@ a img
 #editbar ul li a
 {
   display: block;
-  background: -webkit-linear-gradient(top,#f7f5f2,#ECEAE7);
-  background: linear-gradient(top,#f7f5f2,#ECEAE7);
-  border: 1px solid #eee;
 }
 #editbar ul li a img
 {
