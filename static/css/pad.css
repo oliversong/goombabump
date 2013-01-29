@@ -773,7 +773,6 @@ ul#colorpickerswatches li:hover
   overflow-y:scroll;
   font-size: 14px;
   position:absolute;
-  height:20px;
   right:0px;
   left:0px;
   top:25px;
